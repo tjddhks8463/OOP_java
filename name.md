@@ -43,8 +43,34 @@ public class homework1{
 	}
 
 }
+```
+# OOP2026
+### Homework2
+```java
 
+public class homework5 {
+	public static void main(String []args){
+		int n;
+		int j =1;
+		int i= 4;
+		double pi =(double) i / j;
+		System.out.println(i + '/'+ j);
+		for(n=1;n<10000;n++) {
+			j += 2;
+			if (n % 2 == 1) {
+				System.out.println(" - " + i+ '/'+ j);
+				pi -= (double) i / j;
+			} else {
+				System.out.println(" + " + i+ '/'+ j);
+				pi +=(double) i / j;
+			}
+			
 
+		}
+		System.out.println("\n");
+		System.out.println("pi = "+ pi);
+	}
 
+}
 ```
 ![Alt homework11](./homework1.jpg)
