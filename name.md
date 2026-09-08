@@ -46,10 +46,10 @@ public class homework1{
 ```
 ![Alt homework11](./homework1.jpg)
 # OOP2026
-### Homework5
+### Homework5-1
 ```java
 
-public class homework5 {
+public class homework5-1 {
 	public static void main(String []args){
 		int n;
 		int j =1;
