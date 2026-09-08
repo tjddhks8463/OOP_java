@@ -46,7 +46,7 @@ public class homework1{
 ```
 ![Alt homework11](./homework1.jpg)
 # OOP2026
-### Homework2
+### Homework5
 ```java
 
 public class homework5 {
@@ -74,5 +74,5 @@ public class homework5 {
 
 }
 ```
-![Alt homework11](./homework2.jpg)
+![Alt homework11](./homework5.jpg)
 
