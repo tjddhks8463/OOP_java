@@ -49,7 +49,7 @@ public class homework1{
 ### Homework5-1
 ```java
 
-public class homework5-1 {
+public class homework5 {
 	public static void main(String []args){
 		int n;
 		int j =1;
