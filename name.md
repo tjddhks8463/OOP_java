@@ -66,7 +66,7 @@ public class homework2 {
 ```
 ![Alt homework11](./homework2.jpg)
 # OOP2026
-### Homework5-1
+### Homework3
 ```java
 public class homework3 {
     public static void main(String[] args) {
