@@ -46,6 +46,25 @@ public class homework1{
 ```
 ![Alt homework11](./homework1.jpg)
 # OOP2026
+### Homework2
+```java
+public class homework2 {
+    public static void main(String[] args) {
+        long[] fib = new long[20];
+        fib[0] = 1;
+        fib[1] = 1;
+
+        for (int i = 2; i < 20; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        for (int i = 0; i < 20; i++) {
+            System.out.print(fib[i] + " ");
+        }
+    }
+}
+![Alt homework11](./homework2.jpg)
+# OOP2026
 ### Homework5-1
 ```java
 
@@ -71,6 +90,7 @@ public class homework5 {
 		System.out.println("\n");
 		System.out.println("pi = "+ pi);
 	}
+
 
 }
 ```
