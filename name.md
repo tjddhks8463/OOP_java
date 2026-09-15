@@ -87,6 +87,21 @@ public class homework3 {
 ```
 ![Alt homework11](./homework3.jpg)
 # OOP2026
+### Homework3
+```java
+public class homework4 {
+    public static void main(String[] args) {
+        for (int row = 1; row <= 9; row++) {
+            for (int col = 1; col <= 9; col++) {
+                System.out.print(col + "*" + row + "=" + (col * row) + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+![Alt homework11](./homework4.jpg)
+# OOP2026
 ### Homework5-1
 ```java
 
