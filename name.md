@@ -68,6 +68,27 @@ public class homework2 {
 # OOP2026
 ### Homework5-1
 ```java
+public class homework3 {
+    public static void main(String[] args) {
+        long[] fib = new long[22];
+        fib[0] = 1;
+        fib[1] = 1;
+
+        for (int i = 2; i < 22; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        for (int i = 1; i <= 20; i++) {
+            double ratio = (double) fib[i + 1] / fib[i];
+            System.out.println(fib[i + 1] + "/" + fib[i] + "=" + ratio);
+        }
+    }
+}
+```
+![Alt homework11](./homework3.jpg)
+# OOP2026
+### Homework5-1
+```java
 
 public class homework5 {
 	public static void main(String []args){
