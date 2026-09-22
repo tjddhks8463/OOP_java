@@ -132,4 +132,39 @@ public class homework5 {
 }
 ```
 ![Alt homework11](./homework5-1.jpg)
+# OOP2026
+### Homework5-2
+```java
+public class homework6 {
+	public static void main(String []args){
+		int n;
+		int j =1;
+		int i= 3;
+		double pi =(double) i / j;
+		System.out.println(Math.sqrt(12));
+		System.out.println("(1");
+		pi = 1;
+		for(n=1;n<50;n++) {
+			if (n % 2 == 1) {
+				System.out.println(" - " + 1+ '/'+ i * Math.pow(3,j));
+				pi -= (double) 1 / (i * Math.pow(3,j));
+			} else {
+				System.out.println(" + " + 1+ '/'+ i * Math.pow(3,j));
+				pi +=(double) 1 / (i * Math.pow(3,j))
+						;
+			}
+			i += 2;
+			j += 1;
+		}
+		
+		System.out.print(')');
+		System.out.println("\n");
+		pi = Math.sqrt(12) * pi;
+		
+		System.out.println("pi = "+ pi);
+	}
+
+
+}
+![Alt homework11](./homework5-2.jpg)
 
