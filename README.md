@@ -168,4 +168,34 @@ public class homework6 {
 }
 ```
 ![Alt homework11](./homework5-2.jpg)
+# OOP2026
+### Homework6
+```java
+public class homework6 {
+	public static void main(String []args){
+		int i, n = 10;
+		int array[] =new int[n];
+		int binomial[][] =new int[n][n];
+		float farr[] = new float[n];
+		double darr[] = new double[n];
+		for(i=0; i<n; i++) {
+			binomial[i][0]=binomial[i][i]=1;
+			for(int j = 1; j < i; j++) {
+				binomial[i][j] = binomial[i - 1][j - 1] + binomial[i - 1][j];
+			}
+		}
+		printArray(n, binomial);
+	}
+	public static void printArray(int n, int binomial[][]) {
+			int i, j;
+			for(i=0; i<=n; i++) {
+				for(j=0;j<=i;j++) {
+					System.out.print(binomial[i][j]+ " ");
+				}
+				System.out.println();
+			}
+		}
+}
+```
+![Alt homework11](./homework5-2.jpg)
 
