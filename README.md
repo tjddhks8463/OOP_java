@@ -197,5 +197,5 @@ public class homework6 {
 		}
 }
 ```
-![Alt homework11](./homework5-2.jpg)
+![Alt homework11](./homework6.jpg)
 
