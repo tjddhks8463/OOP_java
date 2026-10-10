@@ -242,7 +242,32 @@ public class homework7 {
 # OOP2026
 ### Homework8
 ```java
+package homework;
 
+public class homework8 {
+    public static void main(String[] args) {
+        String[] subjects = {"국어", "영어", "수학", "과학"};
+        int[] scores = new int[subjects.length];
+        int totalSum = 0;
+
+        System.out.println("=== 학생 성적표 ===");
+        
+        for (int i = 0; i < subjects.length; i++) {
+            scores[i] = (int) (Math.random() * 101); 
+            totalSum += scores[i];
+            
+            System.out.println(subjects[i] + " 성적: " + scores[i] + "점");
+        }
+
+        double average = (double) totalSum / subjects.length;
+
+        System.out.println("---------------------------");
+        System.out.println("총점: " + totalSum + "점");
+        System.out.printf("평균: %.2f점\n", average);
+    }
+}
+```
+![Alt homework11](./homework8.jpg)
 # OOP2026
 ### Homework10
 ```java
