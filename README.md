@@ -312,4 +312,65 @@ public class homework9{
 # OOP2026
 ### Homework11
 ```java
+package homework;
+
+import java.util.Arrays;
+
+public class homework11 {
+    public static void main(String[] args) {
+        int array_count;
+
+        if (args.length < 1) {
+            array_count = 10;
+        } else {
+            array_count = Integer.parseInt(args[0]);
+        }
+        int[] arr = new int[array_count];
+        for (int i = 0; i < array_count; i++) {
+            arr[i] = (int) (Math.random() * 100) + 1;
+        }
+        System.out.print("생성된 데이터: ");
+        for (int i = 0; i < array_count; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println("\n");
+        double sum = 0;
+        for (int i = 0; i < array_count; i++) {
+            sum += arr[i];
+        }
+        double arithmeticMean = sum / array_count;
+
+        double logSum = 0;
+        for (int i = 0; i < array_count; i++) {
+            logSum += Math.log(arr[i]);
+        }
+        double geometricMean = Math.exp(logSum / array_count);
+
+        double reciprocalSum = 0;
+        for (int i = 0; i < array_count; i++) {
+            reciprocalSum += 1.0 / arr[i];
+        }
+        double harmonicMean = array_count / reciprocalSum;
+
+        int[] sortedArr = arr.clone(); 
+        Arrays.sort(sortedArr);      
+
+        double median;
+        if (array_count % 2 == 1) {
+            median = sortedArr[array_count / 2];
+        } else {
+            median = (sortedArr[array_count / 2 - 1] + sortedArr[array_count / 2]) / 2.0;
+        }
+
+
+        System.out.println("=== [평균 & 중앙값 계산 결과] ===");
+        System.out.printf("1. 산술평균 (Arithmetic Mean) : %.4f\n", arithmeticMean);
+        System.out.printf("2. 기하평균 (Geometric Mean)    : %.4f\n", geometricMean);
+        System.out.printf("3. 조화평균 (Harmonic Mean)     : %.4f\n", harmonicMean);
+        System.out.printf("4. 중앙값 (Median)             : %.4f\n", median);
+    }
+}
+```
+![Alt homework11](./homework11.jpg)
+
 
