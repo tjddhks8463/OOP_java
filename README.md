@@ -372,5 +372,90 @@ public class homework11 {
 }
 ```
 ![Alt homework11](./homework11.jpg)
+# OOP2026
+### Homework13
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
+public class calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        while (true) {
+            try {
+                System.out.print("수식을 입력하세요 (예: 5 / 2 + 3 ) : ");
+                String inputString = scanner.nextLine();
+                
+                if (inputString.trim().isEmpty()) continue;
+                if (inputString.equalsIgnoreCase("exit")) break;
+
+                String[] arrOfStr = inputString.split(" ");
+                
+                List<Double> numbers = new ArrayList<>();
+                List<String> operators = new ArrayList<>();
+
+                for (int i = 0; i < arrOfStr.length; i++) {
+                    if (i % 2 == 0) {
+                        numbers.add(Double.parseDouble(arrOfStr[i]));
+                    } else {
+                        operators.add(arrOfStr[i]);
+                    }
+                }
+
+                for (int i = 0; i < operators.size(); i++) {
+                    String op = operators.get(i);
+                    if (op.equals("*") || op.equals("/")) {
+                        double num1 = numbers.get(i);
+                        double num2 = numbers.get(i + 1);
+                        double res = 0;
+
+                        if (op.equals("*")) {
+                            res = num1 * num2;
+                        } else {
+                            if (num2 == 0) {
+                                throw new ArithmeticException("0으로 나눌 수 없습니다.");
+                            }
+                            res = num1 / num2; 
+                        }
+
+                        numbers.set(i, res);
+                        numbers.remove(i + 1);
+                        operators.remove(i);
+                        i--; 
+                    }
+                }
+
+                double result = numbers.get(0);
+                for (int i = 0; i < operators.size(); i++) {
+                    String op = operators.get(i);
+                    double nextNum = numbers.get(i + 1);
+
+                    if (op.equals("+") || op.equals("#")) {
+                        result += nextNum;
+                    } else if (op.equals("-")) {
+                        result -= nextNum;
+                    }
+                }
+
+                if (result == (long) result) {
+                    System.out.println("결과: " + (long) result);
+                } else {
+                    System.out.println("결과: " + result);
+                }
+
+            } catch (NumberFormatException e) {
+                System.out.println("숫자 형식 오류가 발생했습니다. 올바른 숫자를 입력하세요.");
+            } catch (ArithmeticException e) {
+                System.out.println("연산 오류: " + e.getMessage());
+            } catch (Exception e) {
+                System.out.println("오류가 발생했습니다: " + e.getMessage());
+            }
+        }
+        scanner.close();
+    }
+}
+
+```
+![Alt homework11](./homework13.jpg)
